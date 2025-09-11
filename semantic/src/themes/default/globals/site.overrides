@@ -1,0 +1,60 @@
+/*******************************
+      Global Overrides
+*******************************/
+
+/*--- General Body and Text Styling ---*/
+body {
+  background-color: @myBackgroundColor;
+}
+.ui.header {
+  color: @myTextColor;
+}
+p {
+  color: @mySecondaryTextColor;
+}
+
+/*--- Top Bar ---*/
+.ui.top.attached.demo.menu {
+  background-color: @myPrimaryColor;
+  .item, .icon {
+    color: @white;
+  }
+}
+
+/*--- Sidebar ---*/
+.ui.inverted.vertical.menu.sidebar {
+  background-color: @myBackgroundColor;
+  .header {
+    color: @myTextColor;
+  }
+  .item {
+    color: @myTextColor;
+  }
+  .active.item {
+    background-color: @myPrimaryColor;
+    color: @white;
+  }
+}
+
+/*--- Card ---*/
+.ui.card.red {
+  background-color: @redBackground;
+}
+.ui.card.orange {
+  background-color: @orangeBackground;
+}
+.ui.card.yellow {
+  background-color: @yellowBackground;
+}
+.ui.card.green {
+  background-color: @greenBackground;
+}
+.ui.card.teal {
+  background-color: @tealBackground;
+}
+.ui.card.blue {
+  background-color: @blueBackground;
+}
+.ui.card.black {
+  background-color: @blackBackground;
+}

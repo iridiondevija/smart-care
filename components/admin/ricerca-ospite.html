@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart Care - Piattaforma Socio Sanitarie</title>
+    <link rel="stylesheet" href="../semantic/dist/semantic.min.css" />
+
+    <link rel="stylesheet" href="../css/index.css" />
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.9.3/dist/semantic.min.js"></script>
+    <style>
+      body,
+      html {
+        width: 100%;
+      }
+
+      .main-content {
+        margin-top: 10px;
+      }
+
+      .ui.cards.scrollable {
+        max-height: calc(100vh - 250px);
+        flex-grow: 1;
+        overflow-y: auto;
+        padding-bottom: 1em;
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="ui grid">
+      <div class="ten wide column">
+        <h2 class="ui teal header">Anagrafica Ospite</h2>
+      </div>
+      <div class="six wide column right aligned">
+        <div class="ui buttons">
+          <button class="ui green button">
+            <i class="plus icon"></i>
+            Nuovo Inserimento
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="main-content">
+      <div class="ui segment">
+        <h3 class="ui header">Filtri di Ricerca</h3>
+        <div class="ui form">
+          <div class="ui stackable three column grid">
+            <div class="eight wide column">
+              <div class="field">
+                <label>Cognome, Nome o ID</label>
+                <input type="text" placeholder="Digita per cercare..." />
+              </div>
+            </div>
+            <div class="six wide column">
+              <div class="field">
+                <label>Stato</label>
+                <select class="ui fluid dropdown">
+                  <option value="Tutti">Tutti</option>
+                  <option value="Attivo">Attivo</option>
+                  <option value="In lista d'attesa">In lista d'attesa</option>
+                  <option value="Dimesso">Dimesso</option>
+                </select>
+              </div>
+            </div>
+            <div
+              class="two wide column"
+              style="
+                display: flex;
+                flex-direction: column;
+                justify-content: end;
+              "
+            >
+              <div class="field">
+                <button class="ui primary button">Cerca</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ui three stackable cards scrollable">
+        <div class="ui fluid card">
+          <div class="content">
+            <div class="ui items">
+              <div class="item">
+                <div class="ui tiny image">
+                  <img
+                    src="https://placehold.co/100x100/eeeeee/333333?text=MR"
+                    alt="Foto profilo ospite"
+                  />
+                </div>
+                <div class="content">
+                  <div class="header">
+                    Rossi Mario
+                    <div class="ui green horizontal label floated right">
+                      Attivo
+                    </div>
+                  </div>
+                  <div class="meta">ID: 00123</div>
+                  <div class="description">Nato/a il: 15/05/1945</div>
+                  <div class="extra">
+                    <div class="ui basic button floated right">Dettagli</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="ui fluid card">
+          <div class="content">
+            <div class="ui items">
+              <div class="item">
+                <div class="ui tiny image">
+                  <img
+                    src="https://placehold.co/100x100/eeeeee/333333?text=MR"
+                    alt="Foto profilo ospite"
+                  />
+                </div>
+                <div class="content">
+                  <div class="header">
+                    Rossi Mario
+                    <div class="ui green horizontal label floated right">
+                      Attivo
+                    </div>
+                  </div>
+                  <div class="meta">ID: 00123</div>
+                  <div class="description">Nato/a il: 15/05/1945</div>
+                  <div class="extra">
+                    <div class="ui basic button floated right">Dettagli</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="ui fluid card">
+          <div class="content">
+            <div class="ui items">
+              <div class="item">
+                <div class="ui tiny image">
+                  <img
+                    src="https://placehold.co/100x100/eeeeee/333333?text=MR"
+                    alt="Foto profilo ospite"
+                  />
+                </div>
+                <div class="content">
+                  <div class="header">
+                    Rossi Mario
+                    <div class="ui blue horizontal label floated right">
+                      In lista d'attesa
+                    </div>
+                  </div>
+                  <div class="meta">ID: 00123</div>
+                  <div class="description">Nato/a il: 15/05/1945</div>
+                  <div class="extra">
+                    <div class="ui basic button floated right">Dettagli</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="ui fluid card">
+          <div class="content">
+            <div class="ui items">
+              <div class="item">
+                <div class="ui tiny image">
+                  <img
+                    src="https://placehold.co/100x100/eeeeee/333333?text=MR"
+                    alt="Foto profilo ospite"
+                  />
+                </div>
+                <div class="content">
+                  <div class="header">
+                    Rossi Mario
+                    <div class="ui grey horizontal label floated right">
+                      Dismesso
+                    </div>
+                  </div>
+                  <div class="meta">ID: 00123</div>
+                  <div class="description">Nato/a il: 15/05/1945</div>
+                  <div class="extra">
+                    <div class="ui basic button floated right">Dettagli</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

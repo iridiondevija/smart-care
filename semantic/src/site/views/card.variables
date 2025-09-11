@@ -1,0 +1,28 @@
+/*******************************
+    User Variable Overrides
+*******************************/
+// This file overrides the card variables specifically for your site theme
+
+// Override the colored card backgrounds to use your defined variables
+.ui.card.red {
+  background-color: @redBackground;
+}
+.ui.card.orange {
+  background-color: @orangeBackground;
+}
+.ui.card.yellow {
+  background-color: @yellowBackground;
+}
+.ui.card.green {
+  background-color: @greenBackground;
+}
+.ui.card.teal {
+  background-color: @tealBackground;
+}
+.ui.card.blue {
+  background-color: @blueBackground;
+}
+.ui.card.black {
+  background-color: @blackBackground;
+}
+// You can add more colors here

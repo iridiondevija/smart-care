@@ -1,0 +1,19 @@
+{
+  "name": "my-new-fomantic-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "live-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "fomantic-ui": "^2.9.4",
+    "jquery": "^3.7.1",
+    "live-server": "^1.2.2"
+  }
+}
