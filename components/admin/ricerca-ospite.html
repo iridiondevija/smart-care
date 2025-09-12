@@ -26,6 +26,20 @@
         padding-bottom: 1em;
         margin: 0;
       }
+
+      /* Card look & feel to match mockup */
+      .ui.cards .card {
+        border-radius: 8px;
+      }
+      .ui.items .image img {
+        border-radius: 8px;
+        object-fit: cover;
+      }
+      .line-with-action {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
     </style>
   </head>
   <body>
@@ -35,10 +49,14 @@
       </div>
       <div class="six wide column right aligned">
         <div class="ui buttons">
-          <button class="ui green button">
+          <a
+            href="#"
+            data-page="admin/nuovo-inserimento.html"
+            class="ui right floated green mini button"
+          >
             <i class="plus icon"></i>
             Nuovo Inserimento
-          </button>
+          </a>
         </div>
       </div>
     </div>
@@ -81,7 +99,7 @@
         </div>
       </div>
       <div class="ui three stackable cards scrollable">
-        <div class="ui fluid card">
+        <div class="ui raised fluid card">
           <div class="content">
             <div class="ui items">
               <div class="item">
@@ -98,17 +116,28 @@
                       Attivo
                     </div>
                   </div>
-                  <div class="meta">ID: 00123</div>
-                  <div class="description">Nato/a il: 15/05/1945</div>
+                  <div class="meta line-with-action">
+                    <span>ID: 00123</span>
+                  </div>
+                  <div class="description line-with-action">
+                    <span>Nato/a il: 15/05/1945</span>
+                  </div>
                   <div class="extra">
-                    <div class="ui basic button floated right">Dettagli</div>
+                    <a
+                      href="#"
+                      data-page="admin/fascicolo-ospite.html"
+                      class="ui mini basic primary right floated labeled icon button"
+                    >
+                      <i class="file alternate outline icon"></i>
+                      Dettagli
+                    </a>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="ui fluid card">
+        <div class="ui raised fluid card">
           <div class="content">
             <div class="ui items">
               <div class="item">
@@ -125,17 +154,28 @@
                       Attivo
                     </div>
                   </div>
-                  <div class="meta">ID: 00123</div>
-                  <div class="description">Nato/a il: 15/05/1945</div>
+                  <div class="meta line-with-action">
+                    <span>ID: 00123</span>
+                  </div>
+                  <div class="description line-with-action">
+                    <span>Nato/a il: 15/05/1945</span>
+                  </div>
                   <div class="extra">
-                    <div class="ui basic button floated right">Dettagli</div>
+                    <a
+                      href="#"
+                      data-page="admin/fascicolo-ospite.html"
+                      class="ui mini basic primary right floated labeled icon button"
+                    >
+                      <i class="file alternate outline icon"></i>
+                      Dettagli
+                    </a>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="ui fluid card">
+        <div class="ui raised fluid card">
           <div class="content">
             <div class="ui items">
               <div class="item">
@@ -152,17 +192,28 @@
                       In lista d'attesa
                     </div>
                   </div>
-                  <div class="meta">ID: 00123</div>
-                  <div class="description">Nato/a il: 15/05/1945</div>
+                  <div class="meta line-with-action">
+                    <span>ID: 00123</span>
+                  </div>
+                  <div class="description line-with-action">
+                    <span>Nato/a il: 15/05/1945</span>
+                  </div>
                   <div class="extra">
-                    <div class="ui basic button floated right">Dettagli</div>
+                    <a
+                      href="#"
+                      data-page="admin/fascicolo-ospite.html"
+                      class="ui mini basic primary right floated labeled icon button"
+                    >
+                      <i class="file alternate outline icon"></i>
+                      Dettagli
+                    </a>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="ui fluid card">
+        <div class="ui raised fluid card">
           <div class="content">
             <div class="ui items">
               <div class="item">
@@ -179,10 +230,21 @@
                       Dismesso
                     </div>
                   </div>
-                  <div class="meta">ID: 00123</div>
-                  <div class="description">Nato/a il: 15/05/1945</div>
+                  <div class="meta line-with-action">
+                    <span>ID: 00123</span>
+                  </div>
+                  <div class="description line-with-action">
+                    <span>Nato/a il: 15/05/1945</span>
+                  </div>
                   <div class="extra">
-                    <div class="ui basic button floated right">Dettagli</div>
+                    <a
+                      href="#"
+                      data-page="admin/fascicolo-ospite.html"
+                      class="ui mini basic primary right floated labeled icon button"
+                    >
+                      <i class="file alternate outline icon"></i>
+                      Dettagli
+                    </a>
                   </div>
                 </div>
               </div>

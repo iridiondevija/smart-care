@@ -255,20 +255,54 @@ $(function () {
     permissionsToShow.forEach((permission) => {
       $(`.ui.vertical.menu [data-permission='${permission}']`).show();
     });
+
+    const rolesText = (userRoles || [])
+      .map((r) => r.replace(/_/g, " "))
+      .join(", ");
+    if (rolesText) {
+      $("#logged-user").text(`${datiUtente.nome} (${rolesText})`);
+    } else {
+      $("#logged-user").text(`Ciao ${datiUtente.nome}`);
+    }
   }
 
   updateMenuPermissions();
 
-  const initialPage = $(".ui.sidebar .item.active").data("page");
-  if (initialPage) {
-    $("#content-pusher").load(`../components/${initialPage}`);
+  const savedSidebarPage = sessionStorage.getItem("activeSidebarPage");
+  if (savedSidebarPage) {
+    const $targetItem = $(`.ui.sidebar .item[data-page='${savedSidebarPage}']`);
+    if ($targetItem.length) {
+      $targetItem.siblings(".item").removeClass("active");
+      $targetItem.addClass("active");
+      $("#content-pusher").load(`../components/${savedSidebarPage}`);
+    }
+  } else {
+    const initialPage = $(".ui.sidebar .item.active").data("page");
+    if (initialPage) {
+      $("#content-pusher").load(`../components/${initialPage}`);
+    }
   }
 
   $(".ui.sidebar .item").on("click", function () {
     $(this).siblings(".item").removeClass("active");
     $(this).addClass("active");
     const pagePath = $(this).data("page");
+    sessionStorage.setItem("activeSidebarPage", pagePath);
     $("#content-pusher").load(`../components/${pagePath}`);
+  });
+
+  $(document).on("click", "a[data-page]", function (e) {
+    e.preventDefault();
+    const pagePath = $(this).data("page");
+    if (pagePath) {
+      const $sidebarItem = $(`.ui.sidebar .item[data-page='${pagePath}']`);
+      if ($sidebarItem.length) {
+        $sidebarItem.siblings(".item").removeClass("active");
+        $sidebarItem.addClass("active");
+        sessionStorage.setItem("activeSidebarPage", pagePath);
+      }
+      $("#content-pusher").load(`../components/${pagePath}`);
+    }
   });
 
   $(".ui.top.attached.demo.menu .right.menu a.item:last-child").on(
