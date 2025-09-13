@@ -119,5 +119,36 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.9.4/dist/semantic.min.js"></script>
     <script src="../js/dashboard.js"></script>
+    
+    <!-- Fix for live-server hot reload errors -->
+    <script>
+      // Override the live-server's refreshCSS function to prevent removeChild errors
+      if (typeof refreshCSS !== 'undefined') {
+        const originalRefreshCSS = refreshCSS;
+        refreshCSS = function(resource) {
+          try {
+            originalRefreshCSS(resource);
+          } catch (error) {
+            // Silently handle removeChild errors from live-server
+            if (error.name === 'NotFoundError' && error.message.includes('removeChild')) {
+              console.warn('Live-server CSS refresh error handled:', error.message);
+            } else {
+              throw error;
+            }
+          }
+        };
+      }
+      
+      // Also handle WebSocket errors gracefully
+      const originalConsoleError = console.error;
+      console.error = function(...args) {
+        const message = args.join(' ');
+        if (message.includes('removeChild') && message.includes('NotFoundError')) {
+          console.warn('Live-server error handled:', ...args);
+        } else {
+          originalConsoleError.apply(console, args);
+        }
+      };
+    </script>
   </body>
 </html>
