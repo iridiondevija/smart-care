@@ -6,9 +6,10 @@ function clean() {
   return del(["dist", "build"]);
 }
 
-// 🆕 NEW FUNCTION 🆕
+// 🆕 NEW TASK 🆕
 // This task explicitly copies custom font files before the Fomantic build.
 function copyCustomFonts() {
+  // It copies all font files from the source assets folder.
   return src("semantic/src/themes/default/assets/fonts/*").pipe(
     dest("semantic/dist/themes/default/assets/fonts")
   );
@@ -20,7 +21,6 @@ function semanticBuild() {
   );
 }
 
-// ⚠️ CORRECTED FUNCTION ⚠️
 function copySemanticAssets() {
   const mainFiles = src("semantic/dist/*.{css,js}").pipe(dest("build/dist"));
   const themeAssets = src("semantic/dist/themes/**/*").pipe(
@@ -47,7 +47,7 @@ function copyStaticAssets() {
 
 exports.build = series(
   clean,
-  // 🆕 ADDED TASK 🆕
+  // ➡️ ADDED HERE ⬅️
   copyCustomFonts,
   semanticBuild,
   parallel(copySemanticAssets, copyStaticAssets)
