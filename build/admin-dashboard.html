@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Smart Care - Piattaforma Socio Sanitarie</title>
+
+    <!-- <meta name="viewport" content="width=device-width, initial-s/cale=1.0" /> -->
+
+    <link rel="stylesheet" href="dist/semantic.min.css" />
+
+    <link rel="stylesheet" href="css/index.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      @media (max-width: 767px) {
+        #logged-user {
+          display: none !important;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="ui top attached demo menu">
+      <a class="item" id="sidebar-toggle"><i class="bars icon"></i></a>
+      <a class="item"> Smart Care </a>
+      <div class="right menu">
+        <a class="item mobile hidden" id="logged-user"> </a>
+        <a class="item"> <i class="sign out icon"></i> </a>
+      </div>
+    </div>
+
+    <div class="ui bottom attached segment pushable">
+      <div
+        class="ui inverted vertical menu sidebar"
+        style="display: flex; padding: 10px; gap: 10px"
+      >
+        <a
+          class="item active"
+          data-page="admin/dashboard.html"
+          data-permission="dashboard"
+        >
+          <i class="home icon"></i>
+          Dashboard
+        </a>
+        <div class="header" data-permission="anagrafica">
+          <b>ANAGRAFICA (FSO)</b>
+        </div>
+        <a
+          class="item"
+          data-page="admin/ricerca-ospite.html"
+          data-permission="ricerca-ospite"
+        >
+          <i class="search icon"></i>
+          Ricerca Ospite
+        </a>
+        <a
+          class="item"
+          data-page="admin/nuovo-inserimento.html"
+          data-permission="nuovo-inserimento"
+        >
+          <i class="plus square outline icon"></i>
+          Nuovo Inserimento
+        </a>
+        <div class="header" data-permission="pianificazione">
+          <b>PIANIFICAZIONE (PAI/PEI)</b>
+        </div>
+        <a
+          class="item"
+          data-page="admin/cruscotto-pai.html"
+          data-permission="cruscotto-pai"
+        >
+          <i class="chart bar icon"></i>
+          Cruscotto PAI
+        </a>
+        <a
+          class="item"
+          data-page="admin/redazione-pai.html"
+          data-permission="redazione-pai"
+        >
+          <i class="edit outline icon"></i>
+          Redazione PAI
+        </a>
+        <div class="header" data-permission="area-clinica">
+          <b>AREA CLINICA</b>
+        </div>
+        <a
+          class="item"
+          data-page="admin/cartella-infermieristica.html"
+          data-permission="cartella-infermieristica"
+        >
+          <i class="clipboard outline icon"></i>
+          Cartella Infermieristica
+        </a>
+        <div class="header" data-permission="piani-lavoro">
+          <b>PIANI DI LAVORO</b>
+        </div>
+        <a
+          class="item"
+          data-page="admin/piano-infermieri.html"
+          data-permission="piano-infermieri"
+        >
+          <i class="file alternate outline icon"></i>
+          Piano Lavoro Infermieri
+        </a>
+        <a
+          class="item"
+          data-page="admin/piano-oss.html"
+          data-permission="piano-oss"
+        >
+          <i class="file alternate outline icon"></i>
+          Piano Lavoro OSS
+        </a>
+      </div>
+
+      <div class="pusher">
+        <div
+          class="ui basic segment"
+          id="content-pusher"
+          style="overflow-y: hidden"
+        ></div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+    <script src="dist/semantic.min.js"></script>
+    <script src="js/dashboard.js"></script>
+  </body>
+</html>

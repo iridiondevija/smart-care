@@ -15,14 +15,13 @@ function semanticBuild() {
 // ⚠️ CORRECTED FUNCTION ⚠️
 // This task now copies assets to the correct, relative paths.
 function copySemanticAssets() {
-  // This correctly copies the 'themes' folder to 'build/themes',
-  // which aligns with the relative paths in the compiled CSS
-  const themeAssets = src("semantic/dist/themes/**/*").pipe(
-    dest("build/themes")
-  );
-
   // This correctly copies the main CSS/JS files into 'build/dist'
   const mainFiles = src("semantic/dist/*.{css,js}").pipe(dest("build/dist"));
+
+  // This correctly copies the 'themes' folder INTO the 'dist' folder
+  const themeAssets = src("semantic/dist/themes/**/*").pipe(
+    dest("build/dist/themes")
+  );
 
   return Promise.all([mainFiles, themeAssets]);
 }
