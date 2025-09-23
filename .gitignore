@@ -1,0 +1,4 @@
+# Git ignore file example
+node_modules/
+build/
+dist/
