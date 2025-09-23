@@ -445,7 +445,7 @@ template {
 
 @font-face {
   font-family: 'Nunito Sans';
-  src: url("../themes/default/assets/fonts//Nunito Sans-Regular.woff2") format("woff2") , url("../themes/default/assets/fonts//Nunito Sans-Regular.woff") format("woff");
+  src: url("../themes/default/assets/fonts//NunitoSans-Regular.woff2") format("woff2") , url("../themes/default/assets/fonts//NunitoSans-Regular.woff") format("woff");
   font-style: normal;
   font-weight: normal;
   font-display: swap;
@@ -455,7 +455,7 @@ template {
 
 @font-face {
   font-family: 'Nunito Sans';
-  src: url("../themes/default/assets/fonts//Nunito Sans-Bold.woff2") format("woff2") , url("../themes/default/assets/fonts//Nunito Sans-Bold.woff") format("woff");
+  src: url("../themes/default/assets/fonts//NunitoSans-Bold.woff2") format("woff2") , url("../themes/default/assets/fonts//NunitoSans-Bold.woff") format("woff");
   font-style: normal;
   font-weight: bold;
   font-display: swap;
@@ -465,7 +465,7 @@ template {
 
 @font-face {
   font-family: 'Nunito Sans';
-  src: url("../themes/default/assets/fonts//Nunito Sans-Italic.woff2") format("woff2") , url("../themes/default/assets/fonts//Nunito Sans-Italic.woff") format("woff");
+  src: url("../themes/default/assets/fonts//NunitoSans-Italic.woff2") format("woff2") , url("../themes/default/assets/fonts//NunitoSans-Italic.woff") format("woff");
   font-style: italic;
   font-weight: normal;
   font-display: swap;
@@ -475,7 +475,7 @@ template {
 
 @font-face {
   font-family: 'Nunito Sans';
-  src: url("../themes/default/assets/fonts//Nunito Sans-BoldItalic.woff2") format("woff2") , url("../themes/default/assets/fonts//Nunito Sans-BoldItalic.woff") format("woff");
+  src: url("../themes/default/assets/fonts//NunitoSans-BoldItalic.woff2") format("woff2") , url("../themes/default/assets/fonts//NunitoSans-BoldItalic.woff") format("woff");
   font-style: italic;
   font-weight: bold;
   font-display: swap;
@@ -485,7 +485,7 @@ template {
 
 @font-face {
   font-family: 'Nunito Sans';
-  src: url("../themes/default/assets/fonts//Nunito Sans-Regular.woff2") format("woff2") , url("../themes/default/assets/fonts//Nunito Sans-Regular.woff") format("woff");
+  src: url("../themes/default/assets/fonts//NunitoSans-Regular.woff2") format("woff2") , url("../themes/default/assets/fonts//NunitoSans-Regular.woff") format("woff");
   font-style: normal;
   font-weight: normal;
   font-display: swap;
@@ -495,7 +495,7 @@ template {
 
 @font-face {
   font-family: 'Nunito Sans';
-  src: url("../themes/default/assets/fonts//Nunito Sans-Bold.woff2") format("woff2") , url("../themes/default/assets/fonts//Nunito Sans-Bold.woff") format("woff");
+  src: url("../themes/default/assets/fonts//NunitoSans-Bold.woff2") format("woff2") , url("../themes/default/assets/fonts//NunitoSans-Bold.woff") format("woff");
   font-style: normal;
   font-weight: bold;
   font-display: swap;
@@ -505,7 +505,7 @@ template {
 
 @font-face {
   font-family: 'Nunito Sans';
-  src: url("../themes/default/assets/fonts//Nunito Sans-Italic.woff2") format("woff2") , url("../themes/default/assets/fonts//Nunito Sans-Italic.woff") format("woff");
+  src: url("../themes/default/assets/fonts//NunitoSans-Italic.woff2") format("woff2") , url("../themes/default/assets/fonts//NunitoSans-Italic.woff") format("woff");
   font-style: italic;
   font-weight: normal;
   font-display: swap;
@@ -515,7 +515,7 @@ template {
 
 @font-face {
   font-family: 'Nunito Sans';
-  src: url("../themes/default/assets/fonts//Nunito Sans-BoldItalic.woff2") format("woff2") , url("../themes/default/assets/fonts//Nunito Sans-BoldItalic.woff") format("woff");
+  src: url("../themes/default/assets/fonts//NunitoSans-BoldItalic.woff2") format("woff2") , url("../themes/default/assets/fonts//NunitoSans-BoldItalic.woff") format("woff");
   font-style: italic;
   font-weight: bold;
   font-display: swap;
