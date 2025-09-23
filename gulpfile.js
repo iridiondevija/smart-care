@@ -6,6 +6,14 @@ function clean() {
   return del(["dist", "build"]);
 }
 
+// 🆕 NEW FUNCTION 🆕
+// This task explicitly copies custom font files before the Fomantic build.
+function copyCustomFonts() {
+  return src("semantic/src/themes/default/assets/fonts/*").pipe(
+    dest("semantic/dist/themes/default/assets/fonts")
+  );
+}
+
 function semanticBuild() {
   return src(".", { allowEmpty: true }).pipe(
     shell("cd semantic && npx gulp build")
@@ -13,16 +21,11 @@ function semanticBuild() {
 }
 
 // ⚠️ CORRECTED FUNCTION ⚠️
-// This task now copies assets to the correct, relative paths.
 function copySemanticAssets() {
-  // This correctly copies the main CSS/JS files into 'build/dist'
   const mainFiles = src("semantic/dist/*.{css,js}").pipe(dest("build/dist"));
-
-  // This correctly copies the 'themes' folder INTO the 'dist' folder
   const themeAssets = src("semantic/dist/themes/**/*").pipe(
     dest("build/dist/themes")
   );
-
   return Promise.all([mainFiles, themeAssets]);
 }
 
@@ -44,6 +47,8 @@ function copyStaticAssets() {
 
 exports.build = series(
   clean,
+  // 🆕 ADDED TASK 🆕
+  copyCustomFonts,
   semanticBuild,
   parallel(copySemanticAssets, copyStaticAssets)
 );
