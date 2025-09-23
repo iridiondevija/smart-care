@@ -12,8 +12,10 @@ function semanticBuild() {
   );
 }
 
+// ⚠️ Corrected function ⚠️
 function copySemanticAssets() {
-  return src("semantic/dist/**/*").pipe(dest("build/semantic/dist"));
+  // Copies the entire 'semantic/dist' folder's contents to 'build/dist'
+  return src("semantic/dist/**/*").pipe(dest("build/dist"));
 }
 
 function copyStaticAssets() {
