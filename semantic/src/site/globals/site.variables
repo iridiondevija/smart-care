@@ -5,8 +5,5 @@
           Paths
 *******************************/
 
-/* Fomantic-UI uses a custom @font-face path to allow for assets to be
-served from a CDN.
-*/
 @fontPath: '../themes/default/assets/fonts/';
 @imagePath: '../themes/default/assets/images/';
