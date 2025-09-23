@@ -13,6 +13,7 @@ function semanticBuild() {
 }
 
 // ⚠️ Corrected function ⚠️
+// This function copies the Fomantic UI assets to the correct location.
 function copySemanticAssets() {
   // Copies the entire 'semantic/dist' folder's contents to 'build/dist'
   return src("semantic/dist/**/*").pipe(dest("build/dist"));
