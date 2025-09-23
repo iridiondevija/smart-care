@@ -15,5 +15,9 @@
     "fomantic-ui": "^2.9.4",
     "jquery": "^3.7.1",
     "live-server": "^1.2.2"
+  },
+  "devDependencies": {
+    "gulp": "^5.0.1",
+    "gulp-shell": "^0.8.0"
   }
 }
