@@ -12,6 +12,10 @@ function semanticBuild() {
   );
 }
 
+function copySemanticAssets() {
+  return src("semantic/dist/**/*").pipe(dest("build/semantic/dist"));
+}
+
 function copyStaticAssets() {
   return src([
     "**/*",
@@ -19,7 +23,7 @@ function copyStaticAssets() {
     "!semantic/**",
     "!node_modules",
     "!node_modules/**",
-    "!dist", // Exclude the new dist folder, it's already built.
+    "!dist",
     "!dist/**",
     "!gulpfile.js",
     "!package.json",
@@ -28,5 +32,9 @@ function copyStaticAssets() {
   ]).pipe(dest("build"));
 }
 
-exports.build = series(clean, semanticBuild, copyStaticAssets);
+exports.build = series(
+  clean,
+  semanticBuild,
+  parallel(copySemanticAssets, copyStaticAssets)
+);
 exports.default = exports.build;
