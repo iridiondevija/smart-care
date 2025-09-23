@@ -6,7 +6,7 @@
   "scripts": {
     "start": "live-server",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "gulp build"
+    "build": "npx gulp build"
   },
   "keywords": [],
   "author": "",
@@ -14,10 +14,12 @@
   "type": "commonjs",
   "dependencies": {
     "fomantic-ui": "^2.9.4",
+    "gulp-shell": "^0.8.0",
     "jquery": "^3.7.1",
-    "live-server": "^1.2.2",
-    "gulp": "^5.0.1",
-    "gulp-shell": "^0.8.0"
+    "live-server": "^1.2.2"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "gulp": "^5.0.1",
+    "gulp-cli": "^3.1.0"
+  }
 }
