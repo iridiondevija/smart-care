@@ -12,16 +12,16 @@ function copyCustomFonts() {
   );
 }
 
-// 🆕 UPDATED TASK 🆕
-// This task now ensures Fomantic's dependencies are installed before building.
+function installSemantic() {
+  return src(".", { allowEmpty: true }).pipe(
+    shell("cd semantic && npm install")
+  );
+}
+
+// The build task now depends on the installation task
 function semanticBuild() {
   return src(".", { allowEmpty: true }).pipe(
-    shell([
-      // First, install the necessary dependencies inside the semantic folder.
-      "cd semantic && npm install",
-      // Second, run the Fomantic build command.
-      "cd semantic && npx gulp build",
-    ])
+    shell("cd semantic && npx gulp build")
   );
 }
 
@@ -51,8 +51,9 @@ function copyStaticAssets() {
 
 exports.build = series(
   clean,
-  copyCustomFonts,
+  installSemantic,
   semanticBuild,
+  copyCustomFonts,
   parallel(copySemanticAssets, copyStaticAssets)
 );
 exports.default = exports.build;
