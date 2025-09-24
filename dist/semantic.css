@@ -445,7 +445,7 @@ template {
 
 @font-face {
   font-family: 'Nunito Sans';
-  src: url("./themes/default/assets/fonts/Nunito-Sans-Regular.woff2") format("woff2") , url("./themes/default/assets/fonts/Nunito-Sans-Regular.woff") format("woff");
+  src: url("./themes/custom/assets/fonts/Nunito-Sans-Regular.woff2") format("woff2") , url("./themes/custom/assets/fonts/Nunito-Sans-Regular.woff") format("woff");
   font-style: normal;
   font-weight: normal;
   font-display: swap;
@@ -455,7 +455,7 @@ template {
 
 @font-face {
   font-family: 'Nunito Sans';
-  src: url("./themes/default/assets/fonts/Nunito-Sans-Bold.woff2") format("woff2") , url("./themes/default/assets/fonts/Nunito-Sans-Bold.woff") format("woff");
+  src: url("./themes/custom/assets/fonts/Nunito-Sans-Bold.woff2") format("woff2") , url("./themes/custom/assets/fonts/Nunito-Sans-Bold.woff") format("woff");
   font-style: normal;
   font-weight: bold;
   font-display: swap;
@@ -465,7 +465,7 @@ template {
 
 @font-face {
   font-family: 'Nunito Sans';
-  src: url("./themes/default/assets/fonts/Nunito-Sans-Italic.woff2") format("woff2") , url("./themes/default/assets/fonts/Nunito-Sans-Italic.woff") format("woff");
+  src: url("./themes/custom/assets/fonts/Nunito-Sans-Italic.woff2") format("woff2") , url("./themes/custom/assets/fonts/Nunito-Sans-Italic.woff") format("woff");
   font-style: italic;
   font-weight: normal;
   font-display: swap;
@@ -475,7 +475,7 @@ template {
 
 @font-face {
   font-family: 'Nunito Sans';
-  src: url("./themes/default/assets/fonts/Nunito-Sans-BoldItalic.woff2") format("woff2") , url("./themes/default/assets/fonts/Nunito-Sans-BoldItalic.woff") format("woff");
+  src: url("./themes/custom/assets/fonts/Nunito-Sans-BoldItalic.woff2") format("woff2") , url("./themes/custom/assets/fonts/Nunito-Sans-BoldItalic.woff") format("woff");
   font-style: italic;
   font-weight: bold;
   font-display: swap;
@@ -485,7 +485,7 @@ template {
 
 @font-face {
   font-family: 'Nunito Sans';
-  src: url("./themes/default/assets/fonts/Nunito-Sans-Regular.woff2") format("woff2") , url("./themes/default/assets/fonts/Nunito-Sans-Regular.woff") format("woff");
+  src: url("./themes/custom/assets/fonts/Nunito-Sans-Regular.woff2") format("woff2") , url("./themes/custom/assets/fonts/Nunito-Sans-Regular.woff") format("woff");
   font-style: normal;
   font-weight: normal;
   font-display: swap;
@@ -495,7 +495,7 @@ template {
 
 @font-face {
   font-family: 'Nunito Sans';
-  src: url("./themes/default/assets/fonts/Nunito-Sans-Bold.woff2") format("woff2") , url("./themes/default/assets/fonts/Nunito-Sans-Bold.woff") format("woff");
+  src: url("./themes/custom/assets/fonts/Nunito-Sans-Bold.woff2") format("woff2") , url("./themes/custom/assets/fonts/Nunito-Sans-Bold.woff") format("woff");
   font-style: normal;
   font-weight: bold;
   font-display: swap;
@@ -505,7 +505,7 @@ template {
 
 @font-face {
   font-family: 'Nunito Sans';
-  src: url("./themes/default/assets/fonts/Nunito-Sans-Italic.woff2") format("woff2") , url("./themes/default/assets/fonts/Nunito-Sans-Italic.woff") format("woff");
+  src: url("./themes/custom/assets/fonts/Nunito-Sans-Italic.woff2") format("woff2") , url("./themes/custom/assets/fonts/Nunito-Sans-Italic.woff") format("woff");
   font-style: italic;
   font-weight: normal;
   font-display: swap;
@@ -515,7 +515,7 @@ template {
 
 @font-face {
   font-family: 'Nunito Sans';
-  src: url("./themes/default/assets/fonts/Nunito-Sans-BoldItalic.woff2") format("woff2") , url("./themes/default/assets/fonts/Nunito-Sans-BoldItalic.woff") format("woff");
+  src: url("./themes/custom/assets/fonts/Nunito-Sans-BoldItalic.woff2") format("woff2") , url("./themes/custom/assets/fonts/Nunito-Sans-BoldItalic.woff") format("woff");
   font-style: italic;
   font-weight: bold;
   font-display: swap;
@@ -732,6 +732,116 @@ input::selection {
 /*******************************
       Global Overrides
 *******************************/
+
+@font-face {
+  font-family: 'Nunito Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('./themes/custom/assets/fontsNunito-Sans-Regular.woff2') format('woff2'), url('./themes/custom/assets/fontsNunito-Sans-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Nunito Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('./themes/custom/assets/fontsNunito-Sans-Bold.woff2') format('woff2'), url('./themes/custom/assets/fontsNunito-Sans-Bold.woff') format('woff');
+}
+
+/*--- General Body and Text Styling ---*/
+
+body {
+  background-color: #ECF0F1;
+}
+
+.ui.header {
+  color: #2C3E50;
+}
+
+p {
+  color: #7F8C8D;
+}
+
+/*--- Top Bar ---*/
+
+.ui.top.attached.demo.menu {
+  background-color: #008080;
+}
+
+.ui.top.attached.demo.menu .item,
+.ui.top.attached.demo.menu .icon {
+  color: #fff;
+}
+
+/*--- Sidebar ---*/
+
+.ui.inverted.vertical.menu.sidebar {
+  background-color: #ECF0F1;
+}
+
+.ui.inverted.vertical.menu.sidebar .header {
+  color: #2C3E50;
+}
+
+.ui.inverted.vertical.menu.sidebar .item {
+  color: #2C3E50;
+}
+
+.ui.inverted.vertical.menu.sidebar .active.item {
+  background-color: #008080;
+  color: #fff;
+}
+
+/*--- Card ---*/
+
+.ui.card.red {
+  background-color: #ffe8e6;
+}
+
+.ui.card.orange {
+  background-color: #ffedde;
+}
+
+.ui.card.yellow {
+  background-color: #fff8db;
+}
+
+.ui.card.green {
+  background-color: #e5f9e7;
+}
+
+.ui.card.teal {
+  background-color: #e1f7f7;
+}
+
+.ui.card.blue {
+  background-color: #dff0ff;
+}
+
+.ui.card.black {
+  background-color: #f4f4f4;
+}
+
+/*******************************
+      Global Overrides
+*******************************/
+
+@font-face {
+  font-family: 'Nunito Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('./themes/custom/assets/fontsNunito-Sans-Regular.woff2') format('woff2'), url('./themes/custom/assets/fontsNunito-Sans-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Nunito Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('./themes/custom/assets/fontsNunito-Sans-Bold.woff2') format('woff2'), url('./themes/custom/assets/fontsNunito-Sans-Bold.woff') format('woff');
+}
 
 /*--- General Body and Text Styling ---*/
 
@@ -27792,7 +27902,7 @@ a.ui.inverted.black.header.header.header:hover {
 
 @font-face {
   font-family: "icons";
-  src: url("./themes/default/assets/fonts/icons.woff2") format("woff2") , url("./themes/default/assets/fonts/icons.woff") format("woff");
+  src: url("./themes/custom/assets/fonts/icons.woff2") format("woff2") , url("./themes/custom/assets/fonts/icons.woff") format("woff");
   font-style: normal;
   font-weight: normal;
   font-display: block;
@@ -27803,7 +27913,7 @@ a.ui.inverted.black.header.header.header:hover {
 
 @font-face {
   font-family: "outline-icons";
-  src: url("./themes/default/assets/fonts/outline-icons.woff2") format("woff2") , url("./themes/default/assets/fonts/outline-icons.woff") format("woff");
+  src: url("./themes/custom/assets/fonts/outline-icons.woff2") format("woff2") , url("./themes/custom/assets/fonts/outline-icons.woff") format("woff");
   font-style: normal;
   font-weight: normal;
   font-display: block;
@@ -27814,7 +27924,7 @@ a.ui.inverted.black.header.header.header:hover {
 
 @font-face {
   font-family: "brand-icons";
-  src: url("./themes/default/assets/fonts/brand-icons.woff2") format("woff2") , url("./themes/default/assets/fonts/brand-icons.woff") format("woff");
+  src: url("./themes/custom/assets/fonts/brand-icons.woff2") format("woff2") , url("./themes/custom/assets/fonts/brand-icons.woff") format("woff");
   font-style: normal;
   font-weight: normal;
   font-display: block;
