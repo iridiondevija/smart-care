@@ -2,6 +2,8 @@
       Global Overrides
 *******************************/
 
+@fontPath: "themes/custom/assets/fonts/";
+
 @font-face {
   font-family: 'Nunito Sans';
   font-style: normal;

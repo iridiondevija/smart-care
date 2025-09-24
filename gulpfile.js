@@ -6,12 +6,6 @@ function clean() {
   return del(["dist", "build"]);
 }
 
-function copyCustomFonts() {
-  return src("semantic/src/themes/custom/assets/fonts/*").pipe(
-    dest("semantic/src/themes/default/assets/fonts")
-  );
-}
-
 function installSemantic() {
   return src(".", { allowEmpty: true }).pipe(
     shell("cd semantic && npm install")
@@ -40,11 +34,12 @@ function copyStaticAssets() {
   ]).pipe(dest("build"));
 }
 
+// The main build task that runs all steps in a specific order
 exports.build = series(
-  clean,
-  copyCustomFonts,
-  installSemantic,
-  semanticBuild,
-  copyStaticAssets // 👈 Removed parallel(copySemanticAssets, copyStaticAssets)
+  clean, // Start with a clean slate
+  installSemantic, // Install dependencies first
+  semanticBuild, // Build Fomantic UI and output to the dist folder
+  copyStaticAssets // Copy all other static assets to the final build folder
 );
+
 exports.default = exports.build;
