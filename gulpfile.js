@@ -6,9 +6,10 @@ function clean() {
   return del(["dist", "build"]);
 }
 
+// 🆕 Corrected Task 🆕: Copy fonts to the *source* folder.
 function copyCustomFonts() {
   return src("semantic/src/themes/custom/assets/fonts/*").pipe(
-    dest("semantic/dist/themes/custom/assets/fonts")
+    dest("semantic/src/themes/default/assets/fonts")
   );
 }
 
@@ -19,6 +20,7 @@ function semanticBuild() {
 }
 
 function copySemanticAssets() {
+  // Now this will correctly copy from semantic/dist after a successful build.
   const mainFiles = src("semantic/dist/*.{css,js}").pipe(dest("build/dist"));
   const themeAssets = src("semantic/dist/themes/**/*").pipe(
     dest("build/dist/themes")
