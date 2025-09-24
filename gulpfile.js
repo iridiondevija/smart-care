@@ -6,21 +6,26 @@ function clean() {
   return del(["dist", "build"]);
 }
 
-// 🆕 Corrected Task 🆕: Copy fonts to the *source* folder.
 function copyCustomFonts() {
   return src("semantic/src/themes/custom/assets/fonts/*").pipe(
     dest("semantic/src/themes/default/assets/fonts")
   );
 }
 
+// 🆕 UPDATED TASK 🆕
+// This task now ensures Fomantic's dependencies are installed before building.
 function semanticBuild() {
   return src(".", { allowEmpty: true }).pipe(
-    shell("cd semantic && npx gulp build")
+    shell([
+      // First, install the necessary dependencies inside the semantic folder.
+      "cd semantic && npm install",
+      // Second, run the Fomantic build command.
+      "cd semantic && npx gulp build",
+    ])
   );
 }
 
 function copySemanticAssets() {
-  // Now this will correctly copy from semantic/dist after a successful build.
   const mainFiles = src("semantic/dist/*.{css,js}").pipe(dest("build/dist"));
   const themeAssets = src("semantic/dist/themes/**/*").pipe(
     dest("build/dist/themes")
