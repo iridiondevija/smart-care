@@ -19,8 +19,10 @@ function semanticBuild() {
 }
 
 function copySemanticAssets() {
-  const mainFiles = src("dist/*.{css,js}").pipe(dest("build/dist"));
-  const themeAssets = src("dist/themes/**/*").pipe(dest("build/dist/themes"));
+  const mainFiles = src("semantic/dist/*.{css,js}").pipe(dest("build/dist"));
+  const themeAssets = src("semantic/dist/themes/**/*").pipe(
+    dest("build/dist/themes")
+  );
   return Promise.all([mainFiles, themeAssets]);
 }
 
@@ -44,15 +46,6 @@ exports.build = series(
   clean,
   copyCustomFonts,
   semanticBuild,
-  // Using a callback to ensure the semantic build is fully complete
-  // This is a simple fix to prevent the race condition.
-  (done) => {
-    // You could add a small delay here if needed, but it's not ideal.
-    // A better approach is to not use gulp-shell for this.
-    console.log("Semantic build is complete. Now copying assets...");
-    copySemanticAssets();
-    copyStaticAssets();
-    done();
-  }
+  parallel(copySemanticAssets, copyStaticAssets)
 );
 exports.default = exports.build;
