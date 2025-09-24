@@ -18,19 +18,10 @@ function installSemantic() {
   );
 }
 
-// The build task now depends on the installation task
 function semanticBuild() {
   return src(".", { allowEmpty: true }).pipe(
     shell("cd semantic && npx gulp build")
   );
-}
-
-function copySemanticAssets() {
-  const mainFiles = src("semantic/dist/*.{css,js}").pipe(dest("build/dist"));
-  const themeAssets = src("semantic/dist/themes/**/*").pipe(
-    dest("build/dist/themes")
-  );
-  return Promise.all([mainFiles, themeAssets]);
 }
 
 function copyStaticAssets() {
@@ -51,9 +42,9 @@ function copyStaticAssets() {
 
 exports.build = series(
   clean,
+  copyCustomFonts,
   installSemantic,
   semanticBuild,
-  copyCustomFonts,
-  parallel(copySemanticAssets, copyStaticAssets)
+  copyStaticAssets // 👈 Removed parallel(copySemanticAssets, copyStaticAssets)
 );
 exports.default = exports.build;
